@@ -60,8 +60,14 @@ public class Main {
 
     Main main = new Main();
     Main main2 = new Main();
+    Main main3 = new Main();
+
+    ArrayList<String> order = main.createOrder(selection);
+    System.out.println(order);
+    ArrayList<String> order2 = main2.createOrder(selection);
+    ArrayList<String> order3 = main3.createOrder(selection);
     //System.out.println(main.createOrder(selection));
-    //System.out.println("");
+    System.out.println("");
     //System.out.println(main2.createOrder(selection));
      
 
@@ -70,6 +76,7 @@ public class Main {
     int count = 25;
     int row = count / 5;
     int counter = 0;
+    int arrayCounter = 0;
 
 
     for (int i = 0; i < row; i++) {
@@ -81,7 +88,8 @@ public class Main {
             rowList.add("Free Space");
             counter++;
           } else {
-            rowList.add("option " + (counter+1));
+            rowList.add(order.get(arrayCounter));
+            arrayCounter++;
           counter++;
           }
           
